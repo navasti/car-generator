@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/index.css'
-import App from './App'
+import Layout from './Layout'
 
 import { Provider } from 'react-redux'
 import store from './store/store'
@@ -10,7 +9,7 @@ import store from './store/store'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Layout />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
