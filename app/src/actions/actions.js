@@ -9,24 +9,52 @@ export const pickModel = model => ({
    }
 })
 
-export const switchEngine = engine => ({
+export const pickEngine = engine => ({
    type: types.PICK_ENGINE,
    payload: {
       engine
    }
 })
 
-export const switchGearbox = gearbox => ({
+export const pickGearbox = gearbox => ({
    type: types.PICK_GEARBOX,
    payload: {
       gearbox
    }
 })
 
-export const switchColor = color => ({
+export const pickColor = color => ({
    type: types.PICK_COLOR,
    payload: {
       color
+   }
+})
+
+export const setModelPrice = modelPrice => ({
+   type: types.SET_MODEL_PRICE,
+   payload: {
+      modelPrice
+   }
+})
+
+export const setEnginePrice = enginePrice => ({
+   type: types.SET_ENGINE_PRICE,
+   payload: {
+      enginePrice
+   }
+})
+
+export const setGearboxPrice = gearboxPrice => ({
+   type: types.SET_GEARBOX_PRICE,
+   payload: {
+      gearboxPrice
+   }
+})
+
+export const setColorPrice = colorPrice => ({
+   type: types.SET_COLOR_PRICE,
+   payload: {
+      colorPrice
    }
 })
 
