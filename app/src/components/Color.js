@@ -24,7 +24,12 @@ const Color = () => {
          <div className="colors">
             {
                state.cars.color.map(color => (
-                  <Button color={color.name} key={color.name} onClick={e => handleClick(e, color.name, color.cost)}>
+                  <Button
+                     className="colored"
+                     color={color.name}
+                     key={color.name}
+                     onClick={e => handleClick(e, color.name, color.cost)}
+                  >
                      {color.name}
                   </Button>
                ))

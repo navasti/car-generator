@@ -12,7 +12,7 @@ const Summary = () => {
       <SummaryContainer>
          <h2>Summary</h2>
          <div className="preview">
-            <Car style={{ fill: selectedCar.color ? selectedCar.color : "rgba(0,0,0,.4)" }} />
+            <Car style={{ fill: selectedCar.color ? selectedCar.color : "rgba(255,255,255,.1)" }} />
          </div>
          <SummaryElement>
             <ul>

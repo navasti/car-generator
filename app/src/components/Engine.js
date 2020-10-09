@@ -28,7 +28,7 @@ const Engine = () => {
          <div className="engine">
             {
                compatible.map(engine => (
-                  <Button key={engine.type} onClick={e => handleClick(e, engine.type, engine.cost)}>
+                  <Button color="black" key={engine.type} onClick={e => handleClick(e, engine.type, engine.cost)}>
                      {engine.type} <br /> ({engine.power})
                   </Button>
                ))

@@ -28,7 +28,7 @@ const Gearbox = () => {
          <div className="gearbox">
             {
                compatible.map(gearbox => (
-                  <Button key={gearbox.type} onClick={e => handleClick(e, gearbox.type, gearbox.cost)}>
+                  <Button color="black" key={gearbox.type} onClick={e => handleClick(e, gearbox.type, gearbox.cost)}>
                      {gearbox.type}
                   </Button>
                ))

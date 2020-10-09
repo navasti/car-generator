@@ -38,7 +38,7 @@ const Layout = ({ fetchCars }) => {
   const cars = useSelector(state => state.cars)
   useEffect(() => {
     fetchCars()
-  }, [])
+  }, [fetchCars])
 
   return (
     <>

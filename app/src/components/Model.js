@@ -11,7 +11,6 @@ import { toggleActiveClass } from '../utils/toggleActiveClass'
 const Model = () => {
    const dispatch = useDispatch()
    const cars = useSelector(state => state.cars)
-   const state = useSelector(state => state)
 
    const handleClick = (e, model, price) => {
       dispatch(actions.pickModel(model))
@@ -31,7 +30,7 @@ const Model = () => {
          <div className="model">
             {
                cars.model.map(car => (
-                  <Button onClick={e => handleClick(e, car.name, car.cost)} key={car.name}>
+                  <Button color="black" onClick={e => handleClick(e, car.name, car.cost)} key={car.name}>
                      {car.name}
                   </Button>
                ))
