@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { ReactComponent as Car } from '../assets/car.svg'
 
 //Styled Components
-import { SummaryContainer, SummaryElement } from '../styles/pageStyles'
+import { SummaryContainer, SummaryElement, Attribute } from '../styles/pageStyles'
 
 const Summary = () => {
    const selectedCar = useSelector(state => state.selectedCar)
@@ -12,6 +12,16 @@ const Summary = () => {
       <SummaryContainer>
          <h2>Summary</h2>
          <div className="preview">
+            <Attribute>
+               <p>
+                  Icons made by
+                  <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+               </p>
+               <p>
+                  from
+                  <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+               </p>
+            </Attribute>
             <Car style={{ fill: selectedCar.color ? selectedCar.color : "rgba(255,255,255,.1)" }} />
          </div>
          <SummaryElement>

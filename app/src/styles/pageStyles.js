@@ -111,10 +111,22 @@ export const SummaryContainer = styled.div`
       background-color: #222;
       border-radius: 1rem;
       align-self: center;
+      position: relative;
       svg{
          width: 100%;
          height: 20rem;
       }
+   }
+`
+
+export const Attribute = styled.div`
+   position: absolute;
+   bottom: .7rem;
+   right: .9rem;
+   color: #fff;
+   a{
+      color: #fff;
+      margin-left: .3rem;
    }
 `
 
