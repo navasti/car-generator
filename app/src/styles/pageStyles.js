@@ -5,6 +5,10 @@ export const Headline = styled.h1`
    font-size: 3.2rem;
    text-align: center;
    margin-bottom: 3rem;
+   @media (max-width: 1400px){
+      font-size: 2.9rem;
+      margin-bottom: 2.5rem;
+   }
 `
 
 export const Container = styled.div`
@@ -29,6 +33,11 @@ export const Button = styled.button.attrs(props => ({ color: props.color || "bla
    position: relative;
    transition-property: color;
    transition-duration: 0.4s;
+   @media (max-width: 1400px){
+      width: 16rem;
+      font-size: 1.8rem;
+      padding: 1rem 0;
+   }
    &::before{
       content: "";
       position: absolute;
@@ -63,11 +72,14 @@ export const Button = styled.button.attrs(props => ({ color: props.color || "bla
 `
 
 export const Main = styled.main`
-   margin-bottom: 5rem;
+   margin-bottom: 4rem;
    width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   @media (max-width: 1400px){
+      margin-bottom: 2rem;
+   }
 `
 
 export const Configurator = styled.div`
@@ -80,6 +92,13 @@ export const Configurator = styled.div`
       margin: .5rem 0 0 .5rem;
       font-size: 1.6rem;
    }
+   @media (max-width: 1400px){
+      margin-right: 5rem;
+      height: 50rem;
+      p{
+         font-size: 1.4rem;
+      }
+   }
 `
 
 export const ConfiguratorElement = styled(motion.div)`
@@ -91,6 +110,12 @@ export const ConfiguratorElement = styled(motion.div)`
       width: 75rem;
       display: flex;
       flex-wrap: wrap;
+   }
+   @media (max-width: 1400px){
+      h2{
+         font-size: 2.5rem;
+         margin: 1.5rem 0 .5rem .5rem;
+      }
    }
 `
 
@@ -115,6 +140,12 @@ export const SummaryContainer = styled.div`
       svg{
          width: 100%;
          height: 20rem;
+      }
+   }
+   @media (max-width: 1400px){
+      h2{
+         font-size: 2.5rem;
+         margin: 1rem 0 2rem 0;
       }
    }
 `
@@ -148,4 +179,16 @@ export const SummaryElement = styled.div`
          margin-top: 2.8rem;
       }
    }
+   @media (max-width: 1400px){
+      ul{
+         margin: 2rem 0 1rem 0;
+         li{
+            margin-bottom: 1rem;
+            p{
+               font-size: 1.8rem;
+            }
+         }
+      }
+   }
+
 `
