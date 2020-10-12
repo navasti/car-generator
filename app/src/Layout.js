@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
-
-import { fetchCars } from './utils/fetchCars'
 import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+
+// Utils
+import { fetchCars } from './utils/fetchCars'
 
 // Components
 import Summary from './components/Summary'
@@ -12,7 +13,7 @@ import Model from './components/Model'
 import Color from './components/Color'
 
 // Styled Components
-import { Container, Headline, Main, Configurator } from './styles/pageStyles'
+import { Container, Headline, Main, Configurator, Loader } from './styles/pageStyles'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
@@ -47,7 +48,7 @@ const Layout = ({ fetchCars }) => {
         <Headline>Start customizing your car!</Headline>
         <Main>
           <Configurator>
-            {cars.model && <Model />}
+            {cars.model ? <Model /> : <Loader />}
             {selectedCar.model ? <Engine /> : <p>Select model to see your engine options</p>}
             {selectedCar.engine && <Gearbox />}
             {selectedCar.gearbox && <Color />}

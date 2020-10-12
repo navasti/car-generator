@@ -9,7 +9,9 @@ export const fetchCars = () => {
       axios.get(URL)
          .then(res => {
             const cars = res.data
-            dispatch(fetchCarsSuccess(cars))
+            setTimeout(() => {
+               dispatch(fetchCarsSuccess(cars))
+            }, 1000)
          })
          .catch(err => dispatch(fetchCarsError(err.message)))
    }

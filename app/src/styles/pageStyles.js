@@ -192,3 +192,27 @@ export const SummaryElement = styled.div`
    }
 
 `
+
+export const Loader = styled.div`
+   display: inline-block;
+   width: 75rem;
+   &:after {
+      content: " ";
+      display: block;
+      width: 5.2rem;
+      height: 5.2rem;
+      margin: .8rem;
+      border-radius: 50%;
+      border: 6px solid #777;
+      border-color: #777 transparent #777 transparent;
+      animation: rotating 1.2s linear infinite;
+   }
+   @keyframes rotating {
+      0% {
+         transform: rotate(0deg);
+      }
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+`
